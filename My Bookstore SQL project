@@ -1,0 +1,27 @@
+CREATE TABLE mybookstore (
+  id integer primary key, 
+  name text, 
+  Author text, 
+  price numeric, 
+  publish_year integer, 
+  pages integer
+  );
+
+insert into mybookstore values
+  (1, "The Invisible Library", "Genevieve Cogman", 9.99, 2015, 352),
+  (2, "The Masked Ciry", "Genevieve Cogman", 8.99, 2015, 384),
+  (3, "The Burning Page", "Genevieve Cogman", 11.99, 2016, 368),
+  (4, "The Lost Plot", "Genevieve Cogman", 13.99, 2017, 384),
+  (5, "The Mortal Word", "Genevieve Cogman", 14.99, 2018, 448),
+  (6, "The Secret Chapter", "Genevieve Cogman", 12.99, 2019, 352),
+  (7, "The Dark Archive", "Genevieve Cogman", 13.99, 2020, 352),
+  (8, "The Untold Story", "Genevieve Cogman", 17.99, 2021, 400), 
+  (9, "A Study in Scarlet Women", "Sherry Thomas", 9.99, 2016, 336),
+  (10, "A Conspiracy in Belgravia", "Sherry Thomas", 10.99, 2017, 336),
+  (11, "The Hollow of Fear", "Sherry Thomas", 11.99, 2018, 336),
+  (12, "The Art of Theft", "Sherry Thomas", 12.99, 2019, 304),
+  (13, "Murder on Cold Street", "Sherry Thomas", 13.99, 2020, 352),
+  (14, "Miss Moriarty, I Presume?", "Sherry Thomas", 14.99, 2021, 368),
+  (15, "A Tempest at Sea", "Sherry Thomas", 15.99, 2023, 368);
+
+select author, sum(pages) from mybookstore group by author; 
